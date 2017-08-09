@@ -6,11 +6,14 @@ import router from './router';
 import VueResource from 'vue-resource';
 import VueTouch from 'vue-touch';
 
+// Custom components
+import Navbar from '@/components/navbar';
+Vue.component('navbar', Navbar);
+
 Vue.use(VueResource);
 Vue.use(VueTouch);
 Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
 new Vue({
 	el: '#app',
 	router,

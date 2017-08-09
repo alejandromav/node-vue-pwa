@@ -1,0 +1,8 @@
+<div id="navbar" class="navbar">
+    <span class="lnr-menu" v-on:click="isCollapsed = !isCollapsed"></span>
+    <p>{{ title }}</p>
+
+    <div class="side-menu animated" v-bind:class="{ slideOutLeft: isCollapsed, slideInLeft: !isCollapsed }">
+        <span class="lnr-chevron-left" v-on:click="isCollapsed = !isCollapsed"></span>
+    </div>
+</div>

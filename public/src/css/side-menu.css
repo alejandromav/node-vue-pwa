@@ -1,0 +1,13 @@
+.side-menu {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    color: #444;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .1);
+}

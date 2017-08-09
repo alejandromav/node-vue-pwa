@@ -3,10 +3,10 @@
 // import EventBus from '@/event-bus';
 
 export default {
-	name: 'hello',
+	name: 'main',
 	data () {
 		return {
-			msg: process.env.NODE_ENV
+			env: process.env.NODE_ENV
 		};
 	},
 	mounted() {
@@ -20,9 +20,5 @@ export default {
 			console.error(err);
 		});
 	},
-	methods: {
-		onTap: $e => {
-			console.log($e);
-		}
-	}
+	methods: { }
 };

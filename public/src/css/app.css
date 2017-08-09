@@ -3,15 +3,16 @@ body {
 }
 
 #app {
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
+	color: #444;
 }
 
 main {
 	text-align: center;
-	padding: 20px;
+	padding: 76px 20px 20px 20px;
 	box-sizing: border-box;
 }
 
@@ -35,14 +36,9 @@ header > div {
 	vertical-align: middle;
 }
 
-header > div.menu-icon {
-	cursor: pointer;
-	margin-right: 6px;
-}
-
-div.button {
-	cursor: pointer;
-	border: 1px solid #35495E;
-	width: fit-content;
-	padding: 6px 8px;
+.animated {
+    -webkit-animation-duration: .3s!important;
+    -moz-animation-duration: .3s!important;
+    -o-animation-duration: .3s!important;
+    animation-duration: .3s!important;
 }
