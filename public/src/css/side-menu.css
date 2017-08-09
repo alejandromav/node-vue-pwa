@@ -1,0 +1,14 @@
+.side-menu {
+	position: fixed;
+	height: calc(100% - 56px);
+	width: 300px;
+	top: 56px;
+	left: 0;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #fff;
+	color: #444;
+	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .1);
+	display: none;
+	z-index: 999;
+}
