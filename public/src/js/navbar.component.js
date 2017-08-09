@@ -7,9 +7,5 @@ export default {
 		};
 	},
 	mounted() { },
-	methods: {
-		onTap: $e => {
-			console.log($e);
-		}
-	}
+	methods: { }
 };
