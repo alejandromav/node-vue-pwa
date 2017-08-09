@@ -11,25 +11,38 @@ body {
 
 main {
 	text-align: center;
-	margin-top: 40px;
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 header {
 	margin: 0;
 	height: 56px;
-	padding: 0 16px 0 24px;
+	padding: 16px 20px;
 	box-sizing: border-box;
 	background-color: #35495E;
 	color: #ffffff;
 }
 
-header span {
-	display: block;
+header > span,
+header > div {
+	display: inline-block;
 	position: relative;
 	font-size: 20px;
-	line-height: 1;
-	letter-spacing: .02em;
+	line-height: 20px;
 	font-weight: 400;
 	box-sizing: border-box;
-	padding-top: 16px;
+	vertical-align: middle;
+}
+
+header > div.menu-icon {
+	cursor: pointer;
+	margin-right: 6px;
+}
+
+div.button {
+	cursor: pointer;
+	border: 1px solid #35495E;
+	width: fit-content;
+	padding: 6px 8px;
 }
