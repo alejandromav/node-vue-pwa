@@ -1,0 +1,68 @@
+
+.burger-container {
+	position: relative;
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.burger-container #burger {
+	width: 18px;
+	height: 8px;
+	position: relative;
+	display: block;
+	margin: -4px auto 0;
+	top: 50%;
+}
+.burger-container #burger .bar {
+	width: 100%;
+	height: 1px;
+	display: block;
+	position: relative;
+	background: #FFF;
+	background: rgba(255,255,255,.9);
+	-webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.burger-container #burger .bar.topBar {
+	-webkit-transform: translateY(0px) rotate(0deg);
+	transform: translateY(0px) rotate(0deg);
+}
+.burger-container #burger .bar.btmBar {
+	-webkit-transform: translateY(6px) rotate(0deg);
+	transform: translateY(6px) rotate(0deg);
+}
+
+.burger-container.menu-opened {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.burger-container.menu-opened #burger .bar {
+	-webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+.burger-container.menu-opened #burger .bar.topBar {
+	-webkit-transform: translateY(4px) rotate(45deg);
+	transform: translateY(4px) rotate(45deg);
+}
+.burger-container.menu-opened #burger .bar.btmBar {
+	-webkit-transform: translateY(3px) rotate(-45deg);
+	transform: translateY(3px) rotate(-45deg);
+}

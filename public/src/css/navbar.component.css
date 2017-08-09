@@ -12,9 +12,10 @@
     color: #fff;
 	color: rgba(255, 255, 255, .9);
     box-shadow: 0px -4px 13px 5px rgba(0, 0, 0, .5);
+
+	z-index: 999;
 }
 
-.navbar span,
 .navbar p {
     position: relative;
     display: inline-block;
@@ -23,10 +24,4 @@
     font-size: 16px;
     margin: 0;
     font-weight: 400;
-}
-
-.navbar span {
-    font-size: 24px;
-    cursor: pointer;
-    padding-right: 20px;
 }

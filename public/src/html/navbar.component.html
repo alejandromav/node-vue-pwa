@@ -1,8 +1,14 @@
 <div id="navbar" class="navbar">
-    <span class="lnr-menu" v-on:click="isCollapsed = !isCollapsed"></span>
-    <p>{{ title }}</p>
 
-    <div class="side-menu animated" v-bind:class="{ slideOutLeft: isCollapsed, slideInLeft: !isCollapsed }">
-        <span class="lnr-chevron-left" v-on:click="isCollapsed = !isCollapsed"></span>
-    </div>
+	<div class="burger-container" v-bind:class="{ 'menu-opened': showMenu }" v-on:click="showMenu = !showMenu">
+		<div id="burger">
+			<div class="bar topBar"></div>
+			<div class="bar btmBar"></div>
+		</div>
+	</div>
+
+	<p>{{ title }}</p>
+
+	<div class="side-menu animated" v-bind:class="{ slideOutLeft: showMenu === false, slideInLeft: showMenu }">
+	</div>
 </div>

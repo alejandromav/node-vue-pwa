@@ -3,7 +3,7 @@ export default {
 	data () {
 		return {
 			title: 'app',
-			isCollapsed: true
+			showMenu: null
 		};
 	},
 	mounted() { },

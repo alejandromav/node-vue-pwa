@@ -42,3 +42,14 @@ header > div {
     -o-animation-duration: .3s!important;
     animation-duration: .3s!important;
 }
+.animated-slow {
+    -webkit-animation-duration: 1s!important;
+    -moz-animation-duration: 1s!important;
+    -o-animation-duration: 1s!important;
+    animation-duration: 1s!important;
+}
+
+.slideInLeft,
+.slideOutLeft {
+    display: block !important;
+}
