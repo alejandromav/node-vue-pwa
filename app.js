@@ -5,7 +5,7 @@ const path          = require('path');
 const cookieParser  = require('cookie-parser');
 const bodyParser    = require('body-parser');
 
-const index = require('./routes/index');
+const api = require('./routes/api');
 
 const app = express();
 
@@ -19,13 +19,17 @@ app.set('view engine', 'pug');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public/dist')));
 
-app.use('/', index);
+app.use('/api', api);
+app.use((req, res, next) => {
+	if (req.originalUrl.indexOf('/api') < 0) {
+		next();
+	}
+}, express.static(path.join(__dirname, 'public/dist')));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-	var err = new Error('Not Found');
+	var err = new Error(res.originalUrl + ' Not Found');
 	err.status = 404;
 	next(err);
 });

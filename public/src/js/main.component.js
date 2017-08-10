@@ -10,11 +10,11 @@ export default {
 		};
 	},
 	mounted() {
-		const url = `${process.env.API_URL}/search/get/camisa`;
+		const url = `${process.env.API_URL}`;
 
 		this.$http.get(url).then(response => {
 			// success callback
-			console.log(response.body);
+			console.log(response);
 		}, err => {
 			// error callback
 			console.error(err);

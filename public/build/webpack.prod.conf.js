@@ -13,6 +13,23 @@ var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 var env = config.build.env
 
+var htmlPluginConfig = {
+  filename: config.build.index,
+  template: 'public/index.html',
+  inject: true,
+  minify: {
+	removeComments: true,
+	collapseWhitespace: true,
+	removeAttributeQuotes: true
+	// more options:
+	// https://github.com/kangax/html-minifier#options-quick-reference
+  },
+  // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+  chunksSortMode: 'dependency',
+  serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
+	'./service-worker-prod.js'), 'utf-8')}</script>`
+};
+
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -51,22 +68,18 @@ var webpackConfig = merge(baseWebpackConfig, {
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
-      filename: config.build.index,
-      template: 'public/index.html',
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
-      },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency',
-      serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
-        './service-worker-prod.js'), 'utf-8')}</script>`
-    }),
+    new HtmlWebpackPlugin(Object.assign(
+		{}, htmlPluginConfig, {
+			MODE: 'online'
+		}
+	)),
+	new HtmlWebpackPlugin(Object.assign(
+		{}, htmlPluginConfig, {
+			MODE: 'offline',
+		    template: 'public/offline.html',
+			filename: 'offline.html'
+		}
+  	)),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
