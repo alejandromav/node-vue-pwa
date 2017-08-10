@@ -3,5 +3,5 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
     NODE_ENV: '"development"',
-    API_URL: '"http://com-clother-backend.herokuapp.com/api/0.1"'
+    API_URL: '"https://com-clother-backend.herokuapp.com/api/0.1"'
 })

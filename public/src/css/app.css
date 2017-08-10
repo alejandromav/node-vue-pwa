@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background: #fefefe;
 }
 
 #app {
@@ -52,4 +53,29 @@ header > div {
 .slideInLeft,
 .slideOutLeft {
     display: block !important;
+}
+
+.green {
+    color: #2ecc71 !important;
+    opacity: .9;
+}
+.orange {
+    opacity: .9;
+	color: #e67e22 !important;
+}
+.red {
+    opacity: .9;
+	color: #e74c3c !important;
+}
+.grey {
+    color: #2c3e50 !important;
+    opacity: .9;
+}
+.blue {
+    color: #3498db !important;
+    opacity: .9;
+}
+.purple {
+    color: #9b59b6 !important;
+    opacity: .9;
 }
