@@ -5,7 +5,7 @@
 	top: 56px;
 	left: 0;
 	box-sizing: border-box;
-	padding: 16px 20px;
+	padding: 16px 10px;
 	background: #fff;
 	color: #444;
 	box-shadow: 0 0 6px 3px rgba(0, 0, 0, .1);
@@ -21,9 +21,16 @@
 
 .side-menu ul li {
 	cursor: pointer;
-    padding: 10px 0;
+    padding: 10px;
     box-sizing: border-box;
+	outline: none;
     border-bottom: 1px solid rgba(125,125,125,.15);
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.side-menu ul div {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .side-menu ul li:hover {

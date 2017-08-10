@@ -15,7 +15,7 @@ Vue.use(VueTouch);
 Vue.config.productionTip = false;
 
 VueTouch.config.tap = {
-	time: 500
+	time: 1000
 };
 
 new Vue({
