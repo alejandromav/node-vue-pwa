@@ -14,6 +14,10 @@ Vue.use(VueResource);
 Vue.use(VueTouch);
 Vue.config.productionTip = false;
 
+VueTouch.config.tap = {
+	time: 500
+};
+
 new Vue({
 	el: '#app',
 	router,
