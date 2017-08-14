@@ -14,6 +14,17 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.all('*', (req, res, next) => {
+	console.log('req start: ', req.secure, req.hostname, req.url, app.get('port'));
+	const isLocalhost = req.hostname === 'localhost' || req.hostname === '127.0.0.1';
+
+	if (req.secure || isLocalhost) {
+		return next();
+	}
+
+	res.redirect('https://'+req.hostname + ':' + app.get('secPort') + req.url);
+});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // app.use(logger('dev'));
