@@ -14,6 +14,11 @@ export default new Router({
 			component: Main
 		},
 		{
+			path: '/index.html',
+			name: 'Main',
+			component: Main
+		},
+		{
 			path: '/settings',
 			name: 'Settings',
 			component: Settings
