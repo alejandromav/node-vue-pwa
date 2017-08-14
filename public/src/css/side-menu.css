@@ -22,7 +22,6 @@
 
 .side-menu ul li {
 	cursor: pointer;
-    padding: 16px 10px;
     box-sizing: border-box;
 	outline: none;
     border-bottom: 1px solid rgba(125,125,125,.15);
@@ -40,6 +39,10 @@
 
 .side-menu ul li:last-child {
     border-bottom: none;
+}
+
+.side-menu li > div {
+	padding: 16px 10px;
 }
 
 .side-menu ul li span,
