@@ -4,6 +4,7 @@ const express       = require('express');
 const path          = require('path');
 const cookieParser  = require('cookie-parser');
 const bodyParser    = require('body-parser');
+const compression 	= require('compression');
 
 const index = require('./routes/index');
 const api = require('./routes/api');
@@ -33,6 +34,7 @@ app.all('*', (req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
 
 app.use(express.static(path.join(__dirname, 'public/dist')));
 app.use('/api', api);
