@@ -1,0 +1,6 @@
+@media screen and (max-width: 1024px) {
+	.navbar > p {
+		font-size: 1.2em;
+    	line-height: 1px;
+	}
+}

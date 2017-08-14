@@ -1,0 +1,11 @@
+@media screen and (max-width: 1024px) {
+	.side-menu ul li span {
+		margin-right: 16px;
+		font-size: 1.4em;
+	    opacity: .8;
+	}
+
+	.side-menu ul li p {
+		font-size: 1.1em;
+	}
+}

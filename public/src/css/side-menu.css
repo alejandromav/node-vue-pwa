@@ -2,6 +2,7 @@
 	position: fixed;
 	height: calc(100% - 56px);
 	width: 300px;
+	max-width: 90%;
 	top: 56px;
 	left: 0;
 	box-sizing: border-box;

@@ -5,7 +5,7 @@
 	width: 24px;
 	cursor: pointer;
 	vertical-align: middle;
-	padding: 16px 20px;
+	padding: 16px 16px 16px 20px;
 
 	-webkit-transform: rotate(0deg);
 	transform: rotate(0deg);
