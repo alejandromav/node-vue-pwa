@@ -15,10 +15,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.all('*', (req, res, next) => {
-	console.log('req start: ', req.secure, req.hostname, req.url, app.get('port'));
 	const isLocalhost = req.hostname === 'localhost' || req.hostname === '127.0.0.1';
+	const isSecure = req.headers['x-forwarded-proto'] == 'https' || req.secure;
 
-	if (req.secure || isLocalhost) {
+	console.log('req start: ', isSecure, req.hostname, req.url, app.get('port'));
+
+	if (isSecure || isLocalhost) {
 		return next();
 	}
 
