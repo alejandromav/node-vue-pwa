@@ -17,9 +17,7 @@ app.set('view engine', 'pug');
 
 app.all('*', (req, res, next) => {
 	const isLocalhost = req.hostname === 'localhost' || req.hostname === '127.0.0.1';
-	const isSecure = req.headers['x-forwarded-proto'] == 'https' || req.secure;
-
-	console.log('req start: ', isSecure, req.hostname, req.url, app.get('port'));
+	const isSecure = req.app.get('env') === 'development' || req.headers['x-forwarded-proto'] == 'https' || req.secure;
 
 	if (isSecure || isLocalhost) {
 		return next();
