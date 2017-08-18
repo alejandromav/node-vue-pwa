@@ -10,6 +10,13 @@
 	<p>{{ title }}</p>
 
 	<div class="side-menu animated" v-bind:class="{ slideOutLeft: showMenu === false, slideInLeft: showMenu }">
+		<!-- Profile -->
+		<div class="profile">
+			
+
+		</div>
+
+		<!-- navigation menu -->
 		<ul>
 			<li v-for="page of pages" :key="page.name">
 				<v-touch v-on:tap="navigate(page.path); showMenu = false">

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Main from '@/components/main';
-import Settings from '@/components/settings';
+import Home from '@/pages/home/components/home';
+import Settings from '@/pages/settings/components/settings';
 
 Vue.use(Router);
 
@@ -11,12 +11,12 @@ export default new Router({
 		{
 			path: '/',
 			name: 'Main',
-			component: Main
+			component: Home
 		},
 		{
 			path: '/index.html',
 			name: 'Main',
-			component: Main
+			component: Home
 		},
 		{
 			path: '/settings',

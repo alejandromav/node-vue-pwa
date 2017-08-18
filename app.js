@@ -26,6 +26,17 @@ app.all('*', (req, res, next) => {
 	res.redirect('https://'+req.hostname + req.url);
 });
 
+// CORS middleware
+app.use((req, res, next) => {
+	if (req.app.get('env') === 'development') {
+		res.header('Access-Control-Allow-Origin', '*');
+		res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+		res.header('Access-Control-Allow-Headers', 'Content-Type');
+	}
+	
+	next();
+});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // app.use(logger('dev'));
