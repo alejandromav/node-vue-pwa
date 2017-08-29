@@ -1,6 +1,7 @@
 /*global process*/
 
 // import EventBus from '@/event-bus';
+import { foo } from '@/services/foo.service';
 
 export default {
 	name: 'main',
@@ -10,15 +11,7 @@ export default {
 		};
 	},
 	mounted() {
-		const url = `${process.env.API_URL}`;
-
-		this.$http.get(url).then(response => {
-			// success callback
-			console.log(response);
-		}, err => {
-			// error callback
-			console.error(err);
-		});
+		foo().then(res => console.log(res.body));
 	},
 	methods: { }
 };
