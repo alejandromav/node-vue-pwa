@@ -8,13 +8,14 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
+			alias: [ '/index.html' ],
 			name: 'Main',
-			component: () => import('@/pages/home/components/home')
+			component: () => import('@/components/home/home')
 		},
 		{
 			path: '/settings',
 			name: 'Settings',
-			component: () => import('@/pages/settings/components/settings')
+			component: () => import('@/components/settings/settings')
 		}
 	]
 });
